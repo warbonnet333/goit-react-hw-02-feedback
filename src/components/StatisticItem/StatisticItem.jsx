@@ -1,15 +1,19 @@
 import React from "react"
 import PropTypes from 'prop-types';
+import styles from "./styles.module.css"
 
-const StatisticItem = ({ good = 0, neutral = 0, bad = 0, total = 0, posPersent = 100 }) => (
-  <>
-    <div>Good: {good}</div>
-    <div>Neutral: {neutral}</div>
-    <div>Bad: {bad}</div>
-    <div>Total: {total}</div>
-    <div>Positive feedback: {posPersent}%</div>
-  </>
-)
+const StatisticItem = ({ good, neutral, bad, total, posPersent }) => {
+  return (
+    <ul className={styles.list}>
+      <li>Good: {good}</li>
+      <li>Neutral: {neutral}</li>
+      <li>Bad: {bad}</li>
+      <li>Total: {total}</li>
+      <li>Positive feedback: {posPersent}%</li>
+    </ul>
+  )
+}
+
 
 StatisticItem.propTypes = {
   good: PropTypes.number,
@@ -18,7 +22,5 @@ StatisticItem.propTypes = {
   total: PropTypes.number,
   posPersent: PropTypes.number
 }
-
-
 
 export default StatisticItem

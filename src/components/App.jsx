@@ -1,10 +1,6 @@
 import React from "react";
 import Statistic from "./Statistics/Statistics";
 
-const App = () => (
-  <>
-    <Statistic />
-  </>
-);
+const App = () => <Statistic />;
 
 export default App;
